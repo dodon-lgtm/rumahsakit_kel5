@@ -1,0 +1,133 @@
+﻿using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows.Forms;
+using MySql.Data.MySqlClient;
+using System.IO;
+using System.Drawing;
+using System.Drawing.Drawing2D;
+using System.Windows.Forms;
+using System.Drawing.Printing;
+
+namespace rumahsakit_kel5
+{
+    public partial class Form1 : Form
+    {
+        string database = "server=127.0.0.1;uid=root;database=db_rumahsakit;pwd=;SslMode=none;";
+        public MySqlConnection koneksi;
+        public MySqlCommand cmd;
+        public MySqlDataAdapter adp;
+        public MySqlCommand command;
+
+        public Form1()
+        {
+            InitializeComponent();
+            koneksi = new MySqlConnection(database);
+        }
+
+
+
+        public void Konek()
+        {
+            if (koneksi.State == ConnectionState.Closed)
+                koneksi.Open();
+        }
+
+        public void Disconek()
+        {
+            if (koneksi.State == ConnectionState.Open)
+                koneksi.Close();
+        }
+
+        public void fQuery(string sQuery)
+        {
+            try
+            {
+                koneksi.Open();
+                cmd = new MySqlCommand(sQuery, koneksi);
+                cmd.ExecuteNonQuery();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            finally
+            {
+                koneksi.Close();
+            }
+        }
+
+
+        private void label5_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                string query = "INSERT INTO users (name, email, password) " +
+                               "VALUES (@name, @email, @password)";
+
+                using (MySqlCommand cmd = new MySqlCommand(query, koneksi))
+                {
+
+                    cmd.Parameters.AddWithValue("@name", txtName.Text);
+                    cmd.Parameters.AddWithValue("@email", txtEmail.Text);
+                    cmd.Parameters.AddWithValue("@password", txtPw.Text);
+                    
+
+                    koneksi.Open();
+                    cmd.ExecuteNonQuery();
+                    koneksi.Close();
+                }
+
+                MessageBox.Show("Data berhasil disimpan!");
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Gagal menyimpan data: " + ex.Message);
+            }
+
+
+        
+    }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            Login login = new Login();
+            login.Show();
+        }
+
+        private void checkBox1_CheckedChanged(object sender, EventArgs e)
+        {
+            if(checkBox1.Checked == true)
+            {
+                button1.Enabled = true;
+            }
+            else
+            {
+                button1.Enabled = false;
+            }
+        }
+
+        private void label6_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label4_Click(object sender, EventArgs e)
+        {
+            Login L = new Login();
+            L.Show();
+
+            this.Hide();
+        }
+    }
+}
