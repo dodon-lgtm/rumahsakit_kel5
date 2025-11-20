@@ -62,6 +62,21 @@ namespace rumahsakit_kel5
             }
         }
 
+        private void AddForm()
+        {
+            if (txtName.Text != "" &&
+                txtEmail.Text != "" &&
+                txtPw.Text != "" &&
+                txtConfirmPw.Text != "" &&
+                checkBox1.Checked == true)
+            {
+                btnSu.Enabled = true;
+            }
+            else
+            {
+                btnSu.Enabled = false;
+            }
+        }
 
         private void label5_Click(object sender, EventArgs e)
         {
@@ -72,6 +87,11 @@ namespace rumahsakit_kel5
         {
             try
             {
+                if (txtPw.Text != txtConfirmPw.Text)
+                {
+                    MessageBox.Show("Password Confirm tidak sesuai!");
+                    return;
+                }
                 string query = "INSERT INTO users (name, email, password) " +
                                "VALUES (@name, @email, @password)";
 
@@ -107,14 +127,7 @@ namespace rumahsakit_kel5
 
         private void checkBox1_CheckedChanged(object sender, EventArgs e)
         {
-            if(checkBox1.Checked == true)
-            {
-                button1.Enabled = true;
-            }
-            else
-            {
-                button1.Enabled = false;
-            }
+            AddForm();
         }
 
         private void label6_Click(object sender, EventArgs e)
@@ -128,6 +141,31 @@ namespace rumahsakit_kel5
             L.Show();
 
             this.Hide();
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtEmail_TextChanged(object sender, EventArgs e)
+        {
+            AddForm();
+        }
+
+        private void txtName_TextChanged(object sender, EventArgs e)
+        {
+            AddForm();
+        }
+
+        private void txtPw_TextChanged(object sender, EventArgs e)
+        {
+            AddForm();
+        }
+
+        private void txtConfirmPw_TextChanged(object sender, EventArgs e)
+        {
+            AddForm();
         }
     }
 }

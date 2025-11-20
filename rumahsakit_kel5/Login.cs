@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MySql.Data.MySqlClient;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -7,7 +8,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using MySql.Data.MySqlClient;
+using System.Xml.Linq;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.Button;
 
 namespace rumahsakit_kel5
 {
@@ -44,30 +46,21 @@ namespace rumahsakit_kel5
             }
         }
 
-        private void Login_Load(object sender, EventArgs e)
+        private void AddForm()
         {
-
-        }
-
-        private void button2_Click(object sender, EventArgs e)
-        {               
-                string query = "SELECT * FROM users WHERE email = '" 
-                + txtEmail.Text + "' AND password = '" 
-                + txtPw.Text + "'";
-
-            MySqlDataAdapter adp = new MySqlDataAdapter(query, koneksi);
-            
-            DataTable table = new DataTable();
-            adp.Fill(table);
-
-            if(table.Rows.Count > 0)
+            if (txtEmail.Text != "" &&
+                txtPw.Text != "")
             {
-                MessageBox.Show("Login Berhasil");
+                btnLogin.Enabled = true;
             }
             else
             {
-                MessageBox.Show("Email atau password salah");
+                btnLogin.Enabled = false;
             }
+        }
+        private void Login_Load(object sender, EventArgs e)
+        {
+
         }
 
         private void label2_Click(object sender, EventArgs e)
@@ -76,6 +69,42 @@ namespace rumahsakit_kel5
             f.Show();
 
             this.Close();
+        }
+
+        private void btnLogin_Click(object sender, EventArgs e)
+        {
+            string query = "SELECT * FROM users WHERE email = '"
+               + txtEmail.Text + "' AND password = '"
+               + txtPw.Text + "'";
+
+            MySqlDataAdapter adp = new MySqlDataAdapter(query, koneksi);
+
+            DataTable table = new DataTable();
+            adp.Fill(table);
+
+            if (table.Rows.Count > 0)
+            {
+                string namaUser = table.Rows[0]["name"].ToString();
+                MessageBox.Show("Login Berhasil");
+
+                Home fr = new Home(namaUser);
+                fr.Show();
+                this.Close();
+            }
+            else
+            {
+                MessageBox.Show("Email atau password salah");
+            }
+        }
+
+        private void txtEmail_TextChanged(object sender, EventArgs e)
+        {
+            AddForm();
+        }
+
+        private void txtPw_TextChanged(object sender, EventArgs e)
+        {
+            AddForm();
         }
     }
 }
