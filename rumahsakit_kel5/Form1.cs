@@ -108,6 +108,12 @@ namespace rumahsakit_kel5
                     koneksi.Close();
                 }
 
+                txtName.Text = "";
+                txtConfirmPw.Text = "";
+                txtEmail.Text = "";
+                txtPw.Text = "";
+                checkBox1.Checked = false;
+
                 MessageBox.Show("Data berhasil disimpan!");
             }
             catch (Exception ex)

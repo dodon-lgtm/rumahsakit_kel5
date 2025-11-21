@@ -27,7 +27,6 @@ namespace rumahsakit_kel5
             koneksi = new MySqlConnection(database);
         }
 
-
         public void fQuery(string sQuery)
         {
             try
@@ -85,7 +84,6 @@ namespace rumahsakit_kel5
             if (table.Rows.Count > 0)
             {
                 string namaUser = table.Rows[0]["name"].ToString();
-                MessageBox.Show("Login Berhasil");
 
                 Home fr = new Home(namaUser);
                 fr.Show();

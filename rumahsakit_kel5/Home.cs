@@ -33,5 +33,10 @@ namespace rumahsakit_kel5
         {
             labelUser.Text = userName;
         }
+
+        private void groupBox1_Enter(object sender, EventArgs e)
+        {
+
+        }
     }
 }
