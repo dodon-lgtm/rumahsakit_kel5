@@ -36,11 +36,25 @@ namespace rumahsakit_kel5
             pictureBox2.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox3.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox4.SizeMode = PictureBoxSizeMode.StretchImage;
+            pictureBox5.SizeMode = PictureBoxSizeMode.StretchImage;
         }
 
         private void groupBox1_Enter(object sender, EventArgs e)
         {
 
+        }
+
+        private void groupBox5_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pictureBox5_Click(object sender, EventArgs e)
+        {
+            Login L = new Login();
+            L.Show();
+
+            this.Close();
         }
     }
 }

@@ -63,6 +63,16 @@ namespace rumahsakit_kel5.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap pngwing_com {
+            get {
+                object obj = ResourceManager.GetObject("pngwing.com", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap WhatsApp_Image_2025_11_20_at_23_10_34 {
             get {
                 object obj = ResourceManager.GetObject("WhatsApp Image 2025-11-20 at 23.10.34", resourceCulture);
