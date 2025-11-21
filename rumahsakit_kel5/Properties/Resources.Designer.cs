@@ -63,9 +63,39 @@ namespace rumahsakit_kel5.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap WhatsApp_Image_2025_11_20_at_23_10_34 {
+            get {
+                object obj = ResourceManager.GetObject("WhatsApp Image 2025-11-20 at 23.10.34", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap WhatsApp_Image_2025_11_20_at_23_10_34__1_ {
             get {
                 object obj = ResourceManager.GetObject("WhatsApp Image 2025-11-20 at 23.10.34 (1)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap WhatsApp_Image_2025_11_21_at_07_15_52 {
+            get {
+                object obj = ResourceManager.GetObject("WhatsApp Image 2025-11-21 at 07.15.52", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap WhatsApp_Image_2025_11_21_at_07_15_52_removebg_preview {
+            get {
+                object obj = ResourceManager.GetObject("WhatsApp_Image_2025-11-21_at_07.15.52-removebg-preview", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

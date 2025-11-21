@@ -59,7 +59,7 @@ namespace rumahsakit_kel5
         }
         private void Login_Load(object sender, EventArgs e)
         {
-
+            pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
         }
 
         private void label2_Click(object sender, EventArgs e)
@@ -103,6 +103,19 @@ namespace rumahsakit_kel5
         private void txtPw_TextChanged(object sender, EventArgs e)
         {
             AddForm();
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void labelLogin_Click(object sender, EventArgs e)
+        {
+            Form1 f1 = new Form1();
+            f1.Show();
+
+            this.Close();
         }
     }
 }

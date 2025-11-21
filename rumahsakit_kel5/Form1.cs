@@ -151,7 +151,8 @@ namespace rumahsakit_kel5
 
         private void Form1_Load(object sender, EventArgs e)
         {
-
+            pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
+            pictureBox2.SizeMode = PictureBoxSizeMode.StretchImage;
         }
 
         private void txtEmail_TextChanged(object sender, EventArgs e)
@@ -172,6 +173,27 @@ namespace rumahsakit_kel5
         private void txtConfirmPw_TextChanged(object sender, EventArgs e)
         {
             AddForm();
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            error p = new error();
+            p.Show();
+
+            this.Hide();
+        }
+
+        private void label4_Click_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pictureBox2_Click(object sender, EventArgs e)
+        {
+            error r = new error();
+            r.Show();
+
+            this.Hide();
         }
     }
 }

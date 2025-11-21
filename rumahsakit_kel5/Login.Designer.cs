@@ -37,6 +37,8 @@ namespace rumahsakit_kel5
             this.labelLogin = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // label3
@@ -98,6 +100,7 @@ namespace rumahsakit_kel5
             this.labelLogin.Size = new System.Drawing.Size(55, 16);
             this.labelLogin.TabIndex = 28;
             this.labelLogin.Text = "Sign Up";
+            this.labelLogin.Click += new System.EventHandler(this.labelLogin_Click);
             // 
             // label6
             // 
@@ -120,11 +123,23 @@ namespace rumahsakit_kel5
             this.label5.TabIndex = 29;
             this.label5.Text = "Login";
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::rumahsakit_kel5.Properties.Resources.WhatsApp_Image_2025_11_21_at_07_15_52_removebg_preview;
+            this.pictureBox1.Location = new System.Drawing.Point(50, 3);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(192, 133);
+            this.pictureBox1.TabIndex = 30;
+            this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
+            // 
             // Login
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.Menu;
             this.ClientSize = new System.Drawing.Size(292, 450);
+            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.labelLogin);
             this.Controls.Add(this.label6);
@@ -136,6 +151,7 @@ namespace rumahsakit_kel5
             this.Name = "Login";
             this.Text = "Login";
             this.Load += new System.EventHandler(this.Login_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -150,5 +166,6 @@ namespace rumahsakit_kel5
         private System.Windows.Forms.Label labelLogin;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }
