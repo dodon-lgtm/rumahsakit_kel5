@@ -32,28 +32,28 @@
             this.labelUser = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.label2 = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
+            this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.groupBox5 = new System.Windows.Forms.GroupBox();
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
-            this.pictureBox4 = new System.Windows.Forms.PictureBox();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.groupBox2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.groupBox3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.groupBox4.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             this.groupBox5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -97,14 +97,23 @@
             this.label2.TabIndex = 1;
             this.label2.Text = "My Doctor";
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::rumahsakit_kel5.Properties.Resources.WhatsApp_Image_2025_11_21_at_09_09_37;
+            this.pictureBox1.Location = new System.Drawing.Point(18, 19);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(100, 77);
+            this.pictureBox1.TabIndex = 0;
+            this.pictureBox1.TabStop = false;
+            // 
             // label3
             // 
             this.label3.AutoSize = true;
             this.label3.Location = new System.Drawing.Point(43, 111);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(89, 13);
+            this.label3.Size = new System.Drawing.Size(84, 13);
             this.label3.TabIndex = 3;
-            this.label3.Text = "Meditical Reports";
+            this.label3.Text = "Medical Reports";
             // 
             // label4
             // 
@@ -134,6 +143,15 @@
             this.groupBox2.TabIndex = 3;
             this.groupBox2.TabStop = false;
             // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = global::rumahsakit_kel5.Properties.Resources.WhatsApp_Image_2025_11_21_at_09_09_36__1_;
+            this.pictureBox2.Location = new System.Drawing.Point(32, 19);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(100, 77);
+            this.pictureBox2.TabIndex = 2;
+            this.pictureBox2.TabStop = false;
+            // 
             // groupBox3
             // 
             this.groupBox3.Controls.Add(this.pictureBox3);
@@ -144,6 +162,15 @@
             this.groupBox3.TabIndex = 4;
             this.groupBox3.TabStop = false;
             // 
+            // pictureBox3
+            // 
+            this.pictureBox3.Image = global::rumahsakit_kel5.Properties.Resources.WhatsApp_Image_2025_11_21_at_09_09_35;
+            this.pictureBox3.Location = new System.Drawing.Point(18, 19);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(100, 77);
+            this.pictureBox3.TabIndex = 4;
+            this.pictureBox3.TabStop = false;
+            // 
             // groupBox4
             // 
             this.groupBox4.Controls.Add(this.label5);
@@ -153,6 +180,15 @@
             this.groupBox4.Size = new System.Drawing.Size(169, 140);
             this.groupBox4.TabIndex = 5;
             this.groupBox4.TabStop = false;
+            // 
+            // pictureBox4
+            // 
+            this.pictureBox4.Image = global::rumahsakit_kel5.Properties.Resources.WhatsApp_Image_2025_11_21_at_09_09_36;
+            this.pictureBox4.Location = new System.Drawing.Point(30, 19);
+            this.pictureBox4.Name = "pictureBox4";
+            this.pictureBox4.Size = new System.Drawing.Size(100, 77);
+            this.pictureBox4.TabIndex = 5;
+            this.pictureBox4.TabStop = false;
             // 
             // groupBox5
             // 
@@ -177,42 +213,6 @@
             this.pictureBox5.TabStop = false;
             this.pictureBox5.Click += new System.EventHandler(this.pictureBox5_Click);
             // 
-            // pictureBox4
-            // 
-            this.pictureBox4.Image = global::rumahsakit_kel5.Properties.Resources.WhatsApp_Image_2025_11_21_at_09_09_36;
-            this.pictureBox4.Location = new System.Drawing.Point(30, 19);
-            this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(100, 77);
-            this.pictureBox4.TabIndex = 5;
-            this.pictureBox4.TabStop = false;
-            // 
-            // pictureBox3
-            // 
-            this.pictureBox3.Image = global::rumahsakit_kel5.Properties.Resources.WhatsApp_Image_2025_11_21_at_09_09_35;
-            this.pictureBox3.Location = new System.Drawing.Point(18, 19);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(100, 77);
-            this.pictureBox3.TabIndex = 4;
-            this.pictureBox3.TabStop = false;
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.Image = global::rumahsakit_kel5.Properties.Resources.WhatsApp_Image_2025_11_21_at_09_09_36__1_;
-            this.pictureBox2.Location = new System.Drawing.Point(32, 19);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(100, 77);
-            this.pictureBox2.TabIndex = 2;
-            this.pictureBox2.TabStop = false;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::rumahsakit_kel5.Properties.Resources.WhatsApp_Image_2025_11_21_at_09_09_37;
-            this.pictureBox1.Location = new System.Drawing.Point(18, 19);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(100, 77);
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
-            // 
             // Home
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -228,19 +228,19 @@
             this.Load += new System.EventHandler(this.Home_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.groupBox3.ResumeLayout(false);
             this.groupBox3.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             this.groupBox4.ResumeLayout(false);
             this.groupBox4.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             this.groupBox5.ResumeLayout(false);
             this.groupBox5.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
