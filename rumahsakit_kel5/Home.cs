@@ -32,6 +32,10 @@ namespace rumahsakit_kel5
         private void Home_Load(object sender, EventArgs e)
         {
             labelUser.Text = userName;
+            pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
+            pictureBox2.SizeMode = PictureBoxSizeMode.StretchImage;
+            pictureBox3.SizeMode = PictureBoxSizeMode.StretchImage;
+            pictureBox4.SizeMode = PictureBoxSizeMode.StretchImage;
         }
 
         private void groupBox1_Enter(object sender, EventArgs e)
