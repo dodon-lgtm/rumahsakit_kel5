@@ -180,7 +180,7 @@ namespace rumahsakit_kel5
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(-30, 339);
+            this.label4.Location = new System.Drawing.Point(-26, 339);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(358, 13);
             this.label4.TabIndex = 31;
@@ -189,10 +189,10 @@ namespace rumahsakit_kel5
             // 
             // pictureBox2
             // 
-            this.pictureBox2.Image = global::rumahsakit_kel5.Properties.Resources.WhatsApp_Image_2025_11_20_at_23_10_34;
-            this.pictureBox2.Location = new System.Drawing.Point(185, 355);
+            this.pictureBox2.Image = global::rumahsakit_kel5.Properties.Resources.downloadbaru;
+            this.pictureBox2.Location = new System.Drawing.Point(179, 355);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(97, 29);
+            this.pictureBox2.Size = new System.Drawing.Size(115, 29);
             this.pictureBox2.TabIndex = 30;
             this.pictureBox2.TabStop = false;
             this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click);
@@ -202,7 +202,7 @@ namespace rumahsakit_kel5
             this.pictureBox1.Image = global::rumahsakit_kel5.Properties.Resources.WhatsApp_Image_2025_11_20_at_23_10_34__1_;
             this.pictureBox1.Location = new System.Drawing.Point(12, 355);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(97, 29);
+            this.pictureBox1.Size = new System.Drawing.Size(111, 29);
             this.pictureBox1.TabIndex = 29;
             this.pictureBox1.TabStop = false;
             this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
