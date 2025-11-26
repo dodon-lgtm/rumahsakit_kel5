@@ -16,7 +16,7 @@ using System.Drawing.Printing;
 
 namespace rumahsakit_kel5
 {
-    public partial class Form1 : Form
+    public partial class SignUp : Form
     {
         string database = "server=127.0.0.1;uid=root;database=db_rumahsakit;pwd=;SslMode=none;";
         public MySqlConnection koneksi;
@@ -24,7 +24,7 @@ namespace rumahsakit_kel5
         public MySqlDataAdapter adp;
         public MySqlCommand command;
 
-        public Form1()
+        public SignUp()
         {
             InitializeComponent();
             koneksi = new MySqlConnection(database);

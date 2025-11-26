@@ -36,7 +36,8 @@ namespace rumahsakit_kel5
             pictureBox2.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox3.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox4.SizeMode = PictureBoxSizeMode.StretchImage;
-            pictureBox5.SizeMode = PictureBoxSizeMode.StretchImage;
+            picLogout.SizeMode = PictureBoxSizeMode.StretchImage;
+            picProfil.SizeMode = PictureBoxSizeMode.StretchImage;
         }
 
         private void groupBox1_Enter(object sender, EventArgs e)
@@ -54,6 +55,13 @@ namespace rumahsakit_kel5
             Login L = new Login();
             L.Show();
 
+            this.Close();
+        }
+
+        private void picProfil_Click(object sender, EventArgs e)
+        {
+            Profile f = new Profile();
+            f.Show();
             this.Close();
         }
     }

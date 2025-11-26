@@ -29,7 +29,7 @@ namespace rumahsakit_kel5
 
         private void btnBack_Click(object sender, EventArgs e)
         {
-            Form1 f1 = new Form1();
+            SignUp f1 = new SignUp();
             f1.Show();
 
             this.Close();

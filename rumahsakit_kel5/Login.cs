@@ -64,7 +64,7 @@ namespace rumahsakit_kel5
 
         private void label2_Click(object sender, EventArgs e)
         {
-            Form1 f = new Form1();
+            SignUp f = new SignUp();
             f.Show();
 
             this.Close();
@@ -112,7 +112,7 @@ namespace rumahsakit_kel5
 
         private void labelLogin_Click(object sender, EventArgs e)
         {
-            Form1 f1 = new Form1();
+            SignUp f1 = new SignUp();
             f1.Show();
 
             this.Close();
