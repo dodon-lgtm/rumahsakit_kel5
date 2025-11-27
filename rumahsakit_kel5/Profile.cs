@@ -62,12 +62,12 @@ namespace rumahsakit_kel5
 
             if (r == DialogResult.Yes)
             {
-                koneksi();
-                conn.Open();
-                string sql = " INSERT users SET "
-                cmd = new MySqlCommand(sql, conn);
-                cmd.Parameters.AddWithValue("@kelas", comboBox1.Text);
-                cmd.ExecuteNonQuery();
+                //koneksi();
+                //conn.Open();
+                //string sql = " INSERT users SET "
+                //cmd = new MySqlCommand(sql, conn);
+                //cmd.Parameters.AddWithValue("@kelas", comboBox1.Text);
+                //cmd.ExecuteNonQuery();
 
 
                 MessageBox.Show("save berhasil");

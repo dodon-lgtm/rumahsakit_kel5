@@ -34,7 +34,7 @@ namespace rumahsakit_kel5
             this.txtPw = new System.Windows.Forms.TextBox();
             this.txtEmail = new System.Windows.Forms.TextBox();
             this.btnLogin = new System.Windows.Forms.Button();
-            this.labelLogin = new System.Windows.Forms.Label();
+            this.labelSingUp = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
@@ -90,17 +90,17 @@ namespace rumahsakit_kel5
             this.btnLogin.UseVisualStyleBackColor = false;
             this.btnLogin.Click += new System.EventHandler(this.btnLogin_Click);
             // 
-            // labelLogin
+            // labelSingUp
             // 
-            this.labelLogin.AutoSize = true;
-            this.labelLogin.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelLogin.ForeColor = System.Drawing.Color.Teal;
-            this.labelLogin.Location = new System.Drawing.Point(185, 402);
-            this.labelLogin.Name = "labelLogin";
-            this.labelLogin.Size = new System.Drawing.Size(55, 16);
-            this.labelLogin.TabIndex = 28;
-            this.labelLogin.Text = "Sign Up";
-            this.labelLogin.Click += new System.EventHandler(this.labelLogin_Click);
+            this.labelSingUp.AutoSize = true;
+            this.labelSingUp.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelSingUp.ForeColor = System.Drawing.Color.Teal;
+            this.labelSingUp.Location = new System.Drawing.Point(185, 402);
+            this.labelSingUp.Name = "labelSingUp";
+            this.labelSingUp.Size = new System.Drawing.Size(55, 16);
+            this.labelSingUp.TabIndex = 28;
+            this.labelSingUp.Text = "Sign Up";
+            this.labelSingUp.Click += new System.EventHandler(this.labelLogin_Click);
             // 
             // label6
             // 
@@ -141,7 +141,7 @@ namespace rumahsakit_kel5
             this.ClientSize = new System.Drawing.Size(292, 450);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.label5);
-            this.Controls.Add(this.labelLogin);
+            this.Controls.Add(this.labelSingUp);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.btnLogin);
             this.Controls.Add(this.label3);
@@ -163,7 +163,7 @@ namespace rumahsakit_kel5
         private System.Windows.Forms.TextBox txtPw;
         private System.Windows.Forms.TextBox txtEmail;
         private System.Windows.Forms.Button btnLogin;
-        private System.Windows.Forms.Label labelLogin;
+        private System.Windows.Forms.Label labelSingUp;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.PictureBox pictureBox1;

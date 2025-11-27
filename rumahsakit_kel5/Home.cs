@@ -12,11 +12,12 @@ namespace rumahsakit_kel5
 {
     public partial class Home : Form
     {
-        string userName;
-        public Home(string nama)
+        string userId = UserSession.id;
+        string userNama = UserSession.name;
+        string userEmail = UserSession.email;
+        public Home()
         {
-            InitializeComponent();
-            userName = nama;
+            InitializeComponent();            
         }
 
         private void labelUser_Click(object sender, EventArgs e)
@@ -31,7 +32,8 @@ namespace rumahsakit_kel5
 
         private void Home_Load(object sender, EventArgs e)
         {
-            labelUser.Text = userName;
+            labelUser.Text = UserSession.name;
+
             pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox2.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox3.SizeMode = PictureBoxSizeMode.StretchImage;

@@ -83,9 +83,11 @@ namespace rumahsakit_kel5
 
             if (table.Rows.Count > 0)
             {
-                string namaUser = table.Rows[0]["name"].ToString();
+                UserSession.id = table.Rows[0]["id"].ToString();
+                UserSession.email = table.Rows[0]["email"].ToString();
+                UserSession.name = table.Rows[0]["name"].ToString();
 
-                Home fr = new Home(namaUser);
+                Home fr = new Home();
                 fr.Show();
                 this.Close();
             }
