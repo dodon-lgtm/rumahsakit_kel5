@@ -86,6 +86,7 @@ namespace rumahsakit_kel5
                 UserSession.id = table.Rows[0]["id"].ToString();
                 UserSession.email = table.Rows[0]["email"].ToString();
                 UserSession.name = table.Rows[0]["name"].ToString();
+                UserSession.password = table.Rows[0]["password"].ToString();
 
                 Home fr = new Home();
                 fr.Show();

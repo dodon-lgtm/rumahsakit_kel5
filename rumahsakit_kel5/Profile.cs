@@ -1,82 +1,94 @@
 ﻿using MySql.Data.MySqlClient;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
-using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace rumahsakit_kel5
 {
     public partial class Profile : Form
     {
-        string sql = "server=127.0.0.1;uid=root;database=db_rumahsakit;pwd=;SslMode=none;";
-        public MySqlConnection conn;
-        public MySqlCommand cmd;
+        string connectionString = "server=127.0.0.1;uid=root;database=db_rumahsakit;pwd=;SslMode=none;";
+
+        string userId = UserSession.id;
+        string userNama = UserSession.name;
+        string userPassword = UserSession.password;
 
         public Profile()
         {
             InitializeComponent();
         }
-        private void koneksi()
-        {
 
-            conn = new MySqlConnection(sql);
-            if (conn.State == ConnectionState.Open)
-            {
-                conn.Close();
-            }
-        }
-        private void AddForm()
+        private MySqlConnection GetConnection()
         {
-            if (txtName.Text != "" &&
-                txtPw.Text != "")
-            {
-                btnUp.Enabled = true;
-            }
-            else
-            {
-                btnUp.Enabled = false;
-            }
+            return new MySqlConnection(connectionString);
         }
 
         private void Profile_Load(object sender, EventArgs e)
         {
+            // Isi textbox dengan data session
+            txtName.Text = userNama;
+            txtPw.Text = userPassword;
 
+            AddForm();
         }
 
-        private void groupBox5_Enter(object sender, EventArgs e)
+        private void AddForm()
         {
-
+            btnUp.Enabled = (txtName.Text != "" && txtPw.Text != "");
         }
 
         private void btnUp_Click(object sender, EventArgs e)
         {
-            DialogResult r = MessageBox.Show("Yakin ingin mengubah Profil?",
-                "Komfirmasi",
-                MessageBoxButtons.YesNo);
+            DialogResult r = MessageBox.Show(
+                "Yakin ingin mengubah Profil?",
+                "Konfirmasi",
+                MessageBoxButtons.YesNo,
+                MessageBoxIcon.Question
+            );
 
             if (r == DialogResult.Yes)
             {
-                //koneksi();
-                //conn.Open();
-                //string sql = " INSERT users SET "
-                //cmd = new MySqlCommand(sql, conn);
-                //cmd.Parameters.AddWithValue("@kelas", comboBox1.Text);
-                //cmd.ExecuteNonQuery();
+                try
+                {
+                    using (MySqlConnection conn = GetConnection())
+                    {
+                        conn.Open();
 
+                        string sql = "UPDATE users SET name = @name, password = @password WHERE id = @id";
 
-                MessageBox.Show("save berhasil");
+                        using (MySqlCommand cmd = new MySqlCommand(sql, conn))
+                        {
+                            cmd.Parameters.AddWithValue("@name", txtName.Text);
+                            cmd.Parameters.AddWithValue("@password", txtPw.Text);
+                            cmd.Parameters.AddWithValue("@id", userId);
+
+                            cmd.ExecuteNonQuery();
+                        }
+                    }
+
+                    // Update Session
+                    UserSession.name = txtName.Text;
+                    UserSession.password = txtPw.Text;
+
+                    MessageBox.Show("Profil berhasil diperbarui!", "Sukses");
+
+                    // Kembali ke Home
+                    Home h = new Home();
+                    h.Show();
+                    this.Close();
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Error: " + ex.Message, "Gagal");
+                }
             }
         }
 
         private void btnBack_Click(object sender, EventArgs e)
         {
-            
+            Home h = new Home();
+            h.Show();
+            this.Close();
         }
 
         private void txtName_TextChanged(object sender, EventArgs e)
