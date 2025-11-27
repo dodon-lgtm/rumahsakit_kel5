@@ -71,6 +71,12 @@
     <Compile Include="Home.Designer.cs">
       <DependentUpon>Home.cs</DependentUpon>
     </Compile>
+    <Compile Include="jadwalDokter.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="jadwalDokter.Designer.cs">
+      <DependentUpon>jadwalDokter.cs</DependentUpon>
+    </Compile>
     <Compile Include="Kamar.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -82,6 +88,12 @@
     </Compile>
     <Compile Include="Login.Designer.cs">
       <DependentUpon>Login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="periksaKesehatan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="periksaKesehatan.Designer.cs">
+      <DependentUpon>periksaKesehatan.cs</DependentUpon>
     </Compile>
     <Compile Include="Profile.cs">
       <SubType>Form</SubType>
@@ -106,6 +118,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="periksaKesehatan.resx">
+      <DependentUpon>periksaKesehatan.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Profile.resx">
       <DependentUpon>Profile.cs</DependentUpon>

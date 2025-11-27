@@ -37,6 +37,7 @@ namespace rumahsakit_kel5
             return new MySqlConnection(database);
         }
 
+        //LogOut
         private void pictureBox5_Click(object sender, EventArgs e)
         {
             Login l = new Login();
@@ -44,6 +45,7 @@ namespace rumahsakit_kel5
             this.Close();
         }
 
+        //Ganti Profil
         private void picProfil_Click(object sender, EventArgs e)
         {
             string query = "SELECT * FROM users WHERE id = @id AND name = @name";
@@ -87,25 +89,69 @@ namespace rumahsakit_kel5
             }
         }
 
+        //Group kamar
         private void pictureBox4_Click(object sender, EventArgs e)
         {
             Kamar k = new Kamar();
             k.Show();
             this.Close();
         }
-
         private void label5_Click(object sender, EventArgs e)
         {
             Kamar k = new Kamar();
             k.Show();
             this.Close();
         }
-
         private void groupBox4_Enter(object sender, EventArgs e)
         {
             Kamar k = new Kamar();
             k.Show();
             this.Close();
+        }
+
+        //Group Jadwal Dokter
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            jadwalDokter jd = new jadwalDokter();
+            jd.Show();
+            this.Close();
+        }
+        private void label2_Click(object sender, EventArgs e)
+        {
+            jadwalDokter jd = new jadwalDokter();
+            jd.Show();
+            this.Close();
+        }
+        private void groupBox1_Enter(object sender, EventArgs e)
+        {
+            jadwalDokter jd = new jadwalDokter();
+            jd.Show();
+            this.Close();
+        }
+
+        //Group periksa Kesehatan
+        private void pictureBox2_Click(object sender, EventArgs e)
+        {
+            periksaKesehatan pk = new periksaKesehatan();
+            pk.Show();
+            this.Close();
+        }
+        private void label3_Click(object sender, EventArgs e)
+        {
+            periksaKesehatan pk = new periksaKesehatan();
+            pk.Show();
+            this.Close();
+        }
+        private void groupBox2_Enter(object sender, EventArgs e)
+        {
+            periksaKesehatan pk = new periksaKesehatan();
+            pk.Show();
+            this.Close();
+        }
+
+        private void pictureBox3_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
