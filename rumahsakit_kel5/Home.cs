@@ -66,5 +66,26 @@ namespace rumahsakit_kel5
             f.Show();
             this.Close();
         }
+
+        private void pictureBox4_Click(object sender, EventArgs e)
+        {
+            Kamar k = new Kamar();
+            k.Show();
+            this.Close();
+        }
+
+        private void label5_Click(object sender, EventArgs e)
+        {
+            Kamar k = new Kamar();
+            k.Show();
+            this.Close();
+        }
+
+        private void groupBox4_Enter(object sender, EventArgs e)
+        {
+            Kamar k = new Kamar();
+            k.Show();
+            this.Close();
+        }
     }
 }

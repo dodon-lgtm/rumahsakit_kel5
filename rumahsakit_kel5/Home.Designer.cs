@@ -211,6 +211,7 @@
             this.groupBox4.Size = new System.Drawing.Size(149, 152);
             this.groupBox4.TabIndex = 4;
             this.groupBox4.TabStop = false;
+            this.groupBox4.Enter += new System.EventHandler(this.groupBox4_Enter);
             // 
             // label5
             // 
@@ -221,6 +222,7 @@
             this.label5.Size = new System.Drawing.Size(111, 13);
             this.label5.TabIndex = 1;
             this.label5.Text = "Pemesanan Kamar";
+            this.label5.Click += new System.EventHandler(this.label5_Click);
             // 
             // pictureBox4
             // 
@@ -230,6 +232,7 @@
             this.pictureBox4.Size = new System.Drawing.Size(137, 108);
             this.pictureBox4.TabIndex = 0;
             this.pictureBox4.TabStop = false;
+            this.pictureBox4.Click += new System.EventHandler(this.pictureBox4_Click);
             // 
             // Home
             // 
