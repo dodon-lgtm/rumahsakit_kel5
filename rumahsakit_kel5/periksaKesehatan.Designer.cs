@@ -31,18 +31,15 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(periksaKesehatan));
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.clbGejala = new System.Windows.Forms.CheckedListBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.cmbWaktu = new System.Windows.Forms.ComboBox();
-            this.numLama = new System.Windows.Forms.NumericUpDown();
             this.button1 = new System.Windows.Forms.Button();
+            this.richTextBox1 = new System.Windows.Forms.RichTextBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.groupBox2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numLama)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox2
@@ -70,24 +67,6 @@
             this.label4.Text = "PEMERIKSAAN";
             this.label4.Click += new System.EventHandler(this.label4_Click);
             // 
-            // pictureBox2
-            // 
-            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(322, 19);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(105, 65);
-            this.pictureBox2.TabIndex = 12;
-            this.pictureBox2.TabStop = false;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(6, 19);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(80, 65);
-            this.pictureBox1.TabIndex = 11;
-            this.pictureBox1.TabStop = false;
-            // 
             // clbGejala
             // 
             this.clbGejala.FormattingEnabled = true;
@@ -95,11 +74,10 @@
             "Demam",
             "Pusing",
             "Batuk",
-            "Mual",
-            "Sesak nafas"});
+            "Pilek"});
             this.clbGejala.Location = new System.Drawing.Point(118, 138);
             this.clbGejala.Name = "clbGejala";
-            this.clbGejala.Size = new System.Drawing.Size(156, 79);
+            this.clbGejala.Size = new System.Drawing.Size(156, 64);
             this.clbGejala.TabIndex = 12;
             // 
             // label1
@@ -113,53 +91,53 @@
             this.label1.TabIndex = 13;
             this.label1.Text = "Gejala";
             // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.label2.Location = new System.Drawing.Point(36, 247);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(126, 16);
-            this.label2.TabIndex = 14;
-            this.label2.Text = "Sudah berapa lama";
-            // 
-            // cmbWaktu
-            // 
-            this.cmbWaktu.FormattingEnabled = true;
-            this.cmbWaktu.Location = new System.Drawing.Point(202, 247);
-            this.cmbWaktu.Name = "cmbWaktu";
-            this.cmbWaktu.Size = new System.Drawing.Size(123, 21);
-            this.cmbWaktu.TabIndex = 15;
-            // 
-            // numLama
-            // 
-            this.numLama.Location = new System.Drawing.Point(168, 248);
-            this.numLama.Name = "numLama";
-            this.numLama.Size = new System.Drawing.Size(33, 20);
-            this.numLama.TabIndex = 16;
-            // 
             // button1
             // 
             this.button1.BackColor = System.Drawing.SystemColors.MenuHighlight;
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(118, 311);
+            this.button1.Location = new System.Drawing.Point(118, 255);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(156, 40);
             this.button1.TabIndex = 17;
             this.button1.Text = "Periksa";
             this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // richTextBox1
+            // 
+            this.richTextBox1.Location = new System.Drawing.Point(39, 320);
+            this.richTextBox1.Name = "richTextBox1";
+            this.richTextBox1.Size = new System.Drawing.Size(295, 151);
+            this.richTextBox1.TabIndex = 18;
+            this.richTextBox1.Text = "";
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(6, 19);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(80, 65);
+            this.pictureBox1.TabIndex = 11;
+            this.pictureBox1.TabStop = false;
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
+            this.pictureBox2.Location = new System.Drawing.Point(322, 19);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(105, 65);
+            this.pictureBox2.TabIndex = 12;
+            this.pictureBox2.TabStop = false;
+            this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click);
             // 
             // periksaKesehatan
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(388, 483);
+            this.Controls.Add(this.richTextBox1);
             this.Controls.Add(this.button1);
-            this.Controls.Add(this.numLama);
-            this.Controls.Add(this.cmbWaktu);
-            this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.clbGejala);
             this.Controls.Add(this.groupBox2);
@@ -168,9 +146,8 @@
             this.Load += new System.EventHandler(this.periksaKesehatan_Load);
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numLama)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -184,9 +161,7 @@
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.CheckedListBox clbGejala;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.ComboBox cmbWaktu;
-        private System.Windows.Forms.NumericUpDown numLama;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.RichTextBox richTextBox1;
     }
 }

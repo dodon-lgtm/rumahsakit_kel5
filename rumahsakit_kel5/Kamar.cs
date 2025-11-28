@@ -1,51 +1,1 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
-
-namespace rumahsakit_kel5
-{
-    public partial class Kamar : Form
-    {
-        public Kamar()
-        {
-            InitializeComponent();
-        }
-
-        private void Kamar_Load(object sender, EventArgs e)
-        {
-            pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
-            pictureBox2.SizeMode = PictureBoxSizeMode.StretchImage;
-        }
-
-        private void label3_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void pictureBox1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void groupBox1_Enter(object sender, EventArgs e)
-        {
-
-        }
-
-        private void checkBox1_CheckedChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void pictureBox2_Click(object sender, EventArgs e)
-        {
-
-        }
-    }
-}
+﻿using MySql.Data.MySqlClient;using System;using System.Data;using System.Windows.Forms;namespace rumahsakit_kel5{    public partial class Kamar : Form    {        string database = "server=127.0.0.1;uid=root;database=db_rumahsakit;pwd=;SslMode=none;";        MySqlConnection koneksi;        public Kamar()        {            InitializeComponent();            koneksi = new MySqlConnection(database);        }        private void Kamar_Load(object sender, EventArgs e)        {            LoadJenisKamar();        }        // ============================        // LOAD KOMBO JENIS KAMAR        // ============================        private void LoadJenisKamar()        {            comboJenis.Items.Clear();            comboJenis.Items.Add("VIP");            comboJenis.Items.Add("Kelas 1");            comboJenis.Items.Add("Kelas 2");            comboJenis.Items.Add("Kelas 3");        }        // ============================        // LOAD NOMOR KAMAR (1–30)        // ============================        private void comboJenis_SelectedIndexChanged(object sender, EventArgs e)        {            comboNoKamar.Items.Clear();            for (int i = 1; i <= 30; i++)            {                comboNoKamar.Items.Add(i);            }        }        // ============================        // AMBIL HARGA KAMAR OTOMATIS        // ============================        private void comboNoKamar_SelectedIndexChanged(object sender, EventArgs e)        {            string jenis = comboJenis.Text;            if (jenis == "VIP") txtHarga.Text = "500000";            else if (jenis == "Kelas 1") txtHarga.Text = "350000";            else if (jenis == "Kelas 2") txtHarga.Text = "250000";            else if (jenis == "Kelas 3") txtHarga.Text = "150000";        }        // ============================        // SAVE KE DATABASE + CETAK STRUK        // ============================    private void btnPesan_Click(object sender, EventArgs e)    {        if (comboJenis.Text == "" || comboNoKamar.Text == "" || txtHarga.Text == "")        {            MessageBox.Show("Semua kolom harus diisi!");            return;        }        try        {            koneksi.Open();            string query = "INSERT INTO kamar(no_kamar, harga_kamar, jenis_kamar, users_id) " +                           "VALUES(@no, @harga, @jenis, @user)";            MySqlCommand cmd = new MySqlCommand(query, koneksi);            cmd.Parameters.AddWithValue("@no", comboNoKamar.Text);            cmd.Parameters.AddWithValue("@harga", txtHarga.Text);            cmd.Parameters.AddWithValue("@jenis", comboJenis.Text);            cmd.Parameters.AddWithValue("@user", UserSession.id);            cmd.ExecuteNonQuery();            koneksi.Close();            // ===== CETAK STRUK =====            string struk =                "===== STRUK PEMESANAN KAMAR =====\n" +                "Nama Pemesan : " + UserSession.name + "\n" +                "Jenis Kamar : " + comboJenis.Text + "\n" +                "No Kamar : " + comboNoKamar.Text + "\n" +                "Harga : Rp " + txtHarga.Text + "\n" +                "====================================";            MessageBox.Show(struk, "Struk Pemesanan");        }        catch (Exception ex)        {            MessageBox.Show(ex.Message);        }        finally        {            koneksi.Close();        }    }  }}
